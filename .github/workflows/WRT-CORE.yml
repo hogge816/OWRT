@@ -209,7 +209,7 @@ jobs:
 
             find ./bin/targets/ -iregex ".*\(buildinfo\|json\|sha256sums\|packages\)$" -exec rm -rf {} +
             #新增
-            mv -f ./wrt/bin/packages/*/*/*.apk packages
+            mv -f ./bin/packages/*/*/*.apk packages
             tar -zcf Packages.tar.gz packages
             
             for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
